@@ -1,14 +1,50 @@
 [
   {
-    "standardId": "std-001",
-    "name": "Centralized Observability Baseline",
-    "domain": "monitoring",
-    "required": true
+    "id": "std-001",
+    "name": "API Naming Standard",
+    "domain": "API Design",
+    "version": "1.0",
+    "status": "Active",
+    "description": "Defines consistent API naming, URI structure, and resource conventions."
   },
   {
-    "standardId": "std-002",
-    "name": "Platform API Naming Convention",
-    "domain": "api-design",
-    "required": true
+    "id": "std-002",
+    "name": "Azure Resource Naming Standard",
+    "domain": "Cloud Governance",
+    "version": "1.1",
+    "status": "Active",
+    "description": "Specifies naming and tagging patterns for Azure resources across environments."
+  },
+  {
+    "id": "std-003",
+    "name": "CI/CD Pipeline Standard",
+    "domain": "DevOps",
+    "version": "1.0",
+    "status": "Active",
+    "description": "Defines baseline controls for build, test, security scanning, and deployment stages."
+  },
+  {
+    "id": "std-004",
+    "name": "Secrets Management Standard",
+    "domain": "Security",
+    "version": "1.0",
+    "status": "Active",
+    "description": "Requires secure secret storage, rotation policies, and restricted access patterns."
+  },
+  {
+    "id": "std-005",
+    "name": "Logging and Observability Standard",
+    "domain": "Operations",
+    "version": "1.0",
+    "status": "Active",
+    "description": "Defines logging format, metrics coverage, tracing requirements, and retention expectations."
+  },
+  {
+    "id": "std-006",
+    "name": "Git Branching Standard",
+    "domain": "Engineering Workflow",
+    "version": "1.0",
+    "status": "Active",
+    "description": "Defines branch strategy, pull request checks, and merge governance for repositories."
   }
 ]

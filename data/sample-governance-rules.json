@@ -1,14 +1,58 @@
 [
   {
-    "ruleId": "gov-001",
-    "name": "Approved CI/CD Tooling Only",
-    "severity": "high",
-    "description": "Delivery pipelines must use approved enterprise CI/CD platforms."
+    "id": "rule-001",
+    "name": "Approved Tool Required",
+    "description": "All tools used in production delivery must exist in the approved enterprise tool registry.",
+    "severity": "High",
+    "appliesTo": "Tools and Platforms"
   },
   {
-    "ruleId": "gov-002",
-    "name": "API Ownership Required",
-    "severity": "medium",
-    "description": "Each internal platform API must have a registered owner and support contact."
+    "id": "rule-002",
+    "name": "Owner Required",
+    "description": "Each registered tool, platform, and API must have a documented business and technical owner.",
+    "severity": "High",
+    "appliesTo": "Tools, Platforms, and APIs"
+  },
+  {
+    "id": "rule-003",
+    "name": "Cost Center Required",
+    "description": "All platform assets must be mapped to a cost center for financial accountability.",
+    "severity": "Medium",
+    "appliesTo": "Tools and Cloud Resources"
+  },
+  {
+    "id": "rule-004",
+    "name": "Security Classification Required",
+    "description": "Assets must define data and security classification before production usage.",
+    "severity": "High",
+    "appliesTo": "Tools, APIs, and Data Services"
+  },
+  {
+    "id": "rule-005",
+    "name": "API Versioning Required",
+    "description": "All externally consumed APIs must follow enterprise versioning guidelines.",
+    "severity": "Medium",
+    "appliesTo": "APIs"
+  },
+  {
+    "id": "rule-006",
+    "name": "Logging and Monitoring Required",
+    "description": "Production services must emit standard logs and operational telemetry to approved observability tooling.",
+    "severity": "High",
+    "appliesTo": "Platforms and APIs"
+  },
+  {
+    "id": "rule-007",
+    "name": "Data Privacy Review Required",
+    "description": "Any tool or API processing sensitive data must complete privacy and compliance review.",
+    "severity": "High",
+    "appliesTo": "Data Processing Systems"
+  },
+  {
+    "id": "rule-008",
+    "name": "Lifecycle Status Required",
+    "description": "All registry entries must include lifecycle status such as Strategic, Tolerate, Rationalize, or Sunset.",
+    "severity": "Medium",
+    "appliesTo": "Tools, Platforms, and APIs"
   }
 ]
