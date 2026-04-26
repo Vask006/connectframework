@@ -1,0 +1,11 @@
+{
+  "navigationFallback": {
+    "rewrite": "/",
+    "exclude": ["/_next/*", "/assets/*", "/*.css", "/*.js", "/*.png", "/*.jpg", "/*.svg"]
+  },
+  "globalHeaders": {
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  }
+}

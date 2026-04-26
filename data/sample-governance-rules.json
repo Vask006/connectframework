@@ -1,0 +1,14 @@
+[
+  {
+    "ruleId": "gov-001",
+    "name": "Approved CI/CD Tooling Only",
+    "severity": "high",
+    "description": "Delivery pipelines must use approved enterprise CI/CD platforms."
+  },
+  {
+    "ruleId": "gov-002",
+    "name": "API Ownership Required",
+    "severity": "medium",
+    "description": "Each internal platform API must have a registered owner and support contact."
+  }
+]

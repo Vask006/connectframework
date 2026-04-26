@@ -1,0 +1,14 @@
+[
+  {
+    "standardId": "std-001",
+    "name": "Centralized Observability Baseline",
+    "domain": "monitoring",
+    "required": true
+  },
+  {
+    "standardId": "std-002",
+    "name": "Platform API Naming Convention",
+    "domain": "api-design",
+    "required": true
+  }
+]

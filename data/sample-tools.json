@@ -1,0 +1,16 @@
+[
+  {
+    "toolId": "tool-gh-actions",
+    "name": "GitHub Actions",
+    "category": "CI/CD",
+    "owner": "Platform Engineering",
+    "status": "approved"
+  },
+  {
+    "toolId": "tool-azure-devops",
+    "name": "Azure DevOps Pipelines",
+    "category": "CI/CD",
+    "owner": "Legacy DevOps Team",
+    "status": "under-review"
+  }
+]
