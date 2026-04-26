@@ -10,6 +10,9 @@ export function SiteHeader() {
           <Link href="/architecture">Architecture</Link>
           <Link href="/use-cases">Use Cases</Link>
           <Link href="/roadmap">Roadmap</Link>
+          <a href="https://github.com/Vask006/connectframework" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
         </nav>
       </div>
     </header>

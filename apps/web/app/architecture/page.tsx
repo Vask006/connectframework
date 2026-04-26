@@ -1,4 +1,5 @@
 import { InfoCard } from "@/components/InfoCard";
+import { Hero } from "@/components/Hero";
 import { Section } from "@/components/Section";
 
 const highLevelFlow = [
@@ -75,15 +76,11 @@ const aiCapabilities = [
 export default function ArchitecturePage() {
   return (
     <>
-      <section className="hero architectureHero">
-        <p className="eyebrow">Architecture</p>
-        <h1>CONNECT Framework Enterprise Architecture</h1>
-        <p>
-          CONNECT combines governance, tool registry, AI analysis, standardization,
-          training, and monitoring into a closed-loop platform that supports strategic
-          and delivery decisions across the enterprise.
-        </p>
-      </section>
+      <Hero
+        eyebrow="Architecture"
+        title="CONNECT Framework Enterprise Architecture"
+        description="CONNECT combines governance, tool registry, AI analysis, standardization, training, and monitoring into a closed-loop platform that supports strategic and delivery decisions across the enterprise."
+      />
 
       <Section
         title="High-Level Flow"

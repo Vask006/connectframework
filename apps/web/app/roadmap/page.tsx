@@ -1,25 +1,45 @@
+import { Hero } from "@/components/Hero";
+import { RoadmapPhaseCard } from "@/components/RoadmapPhaseCard";
+import { Section } from "@/components/Section";
+
+const roadmapPhases = [
+  {
+    phase: "Phase 1 - Foundation",
+    description: "Monorepo baseline, public web experience, and deployment readiness."
+  },
+  {
+    phase: "Phase 2 - Registry and Standards",
+    description: "Canonical data model, inventory ingestion, and standards mapping."
+  },
+  {
+    phase: "Phase 3 - Recommendation Intelligence",
+    description: "Explainable consolidation and alignment recommendations."
+  },
+  {
+    phase: "Phase 4 - Integrations and AI",
+    description: "Operational integrations and role-specific AI guidance."
+  }
+] as const;
+
 export default function RoadmapPage() {
   return (
-    <section>
-      <h1 className="pageTitle">Roadmap</h1>
-      <div className="grid">
-        <article className="card">
-          <h3>Phase 1 - Foundation</h3>
-          <p>Monorepo baseline, public web app, and deployment readiness.</p>
-        </article>
-        <article className="card">
-          <h3>Phase 2 - Registry and Standards</h3>
-          <p>Canonical data model, inventory ingestion, and standards mapping.</p>
-        </article>
-        <article className="card">
-          <h3>Phase 3 - Recommendation Intelligence</h3>
-          <p>Explainable consolidation and alignment recommendations.</p>
-        </article>
-        <article className="card">
-          <h3>Phase 4 - Integrations and AI</h3>
-          <p>Operational integrations and role-based AI guidance.</p>
-        </article>
-      </div>
-    </section>
+    <>
+      <Hero
+        eyebrow="Roadmap"
+        title="CONNECT Framework Delivery Roadmap"
+        description="The roadmap prioritizes practical progression from public framework visibility to enterprise-grade governance capabilities."
+      />
+      <Section title="Phased Plan" subtitle="Each phase builds measurable governance and platform alignment capabilities.">
+        <div className="grid">
+          {roadmapPhases.map((item) => (
+            <RoadmapPhaseCard
+              key={item.phase}
+              phase={item.phase}
+              description={item.description}
+            />
+          ))}
+        </div>
+      </Section>
+    </>
   );
 }

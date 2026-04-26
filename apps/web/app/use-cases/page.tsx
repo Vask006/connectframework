@@ -1,3 +1,4 @@
+import { Hero } from "@/components/Hero";
 import { Section } from "@/components/Section";
 import { UseCaseCard } from "@/components/UseCaseCard";
 
@@ -84,14 +85,11 @@ const useCases = [
 export default function UseCasesPage() {
   return (
     <>
-      <section className="hero architectureHero">
-        <p className="eyebrow">Use Cases</p>
-        <h1>Enterprise Use Cases for CONNECT Framework</h1>
-        <p>
-          CONNECT helps organizations apply governance in real operating conditions,
-          from platform rationalization and API alignment to onboarding and risk visibility.
-        </p>
-      </section>
+      <Hero
+        eyebrow="Use Cases"
+        title="Enterprise Use Cases for CONNECT Framework"
+        description="CONNECT helps organizations apply governance in real operating conditions, from platform rationalization and API alignment to onboarding and risk visibility."
+      />
 
       <Section
         title="Real Enterprise Scenarios"

@@ -4,9 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:host": "next dev -H 0.0.0.0 -p 3000",
     "build": "next build",
+    "build:ci": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "start:prod": "next start -p 3000",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "next": "^14.2.5",

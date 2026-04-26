@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { InfoCard } from "@/components/InfoCard";
+import { Hero } from "@/components/Hero";
+import { ModuleCard } from "@/components/ModuleCard";
 import { Section } from "@/components/Section";
 import {
   audiences,
@@ -12,23 +13,15 @@ import {
 export default function HomePage() {
   return (
     <>
-      <section className="hero">
-        <p className="eyebrow">CONNECT Framework</p>
-        <h1>AI-Augmented Enterprise Governance and Platform Alignment</h1>
-        <p>
-          CONNECT helps organizations reduce tool sprawl, enforce standards, guide
-          engineers, detect redundant platforms, and align digital transformation
-          through explainable AI-assisted governance.
-        </p>
-        <div className="ctaGroup">
-          <Link className="btn btnPrimary" href="#solution">
-            Explore the Framework
-          </Link>
-          <Link className="btn" href="/architecture">
-            View Architecture
-          </Link>
-        </div>
-      </section>
+      <Hero
+        eyebrow="CONNECT Framework"
+        title="AI-Augmented Enterprise Governance and Platform Alignment"
+        description="CONNECT helps organizations reduce tool sprawl, enforce standards, guide engineers, detect redundant platforms, and align digital transformation through explainable AI-assisted governance."
+        actions={[
+          { label: "Explore the Framework", href: "#solution", primary: true },
+          { label: "View Architecture", href: "/architecture" }
+        ]}
+      />
 
       <Section
         title="Enterprise Problems We Address"
@@ -65,9 +58,9 @@ export default function HomePage() {
       <Section title="Core Modules" subtitle="Nine integrated modules form the CONNECT operating model.">
         <div className="grid">
           {modules.map((module) => (
-            <InfoCard
+            <ModuleCard
               key={module.name}
-              title={module.name}
+              name={module.name}
               description={module.description}
             />
           ))}
@@ -80,9 +73,9 @@ export default function HomePage() {
       >
         <div className="grid gridAudience">
           {audiences.map((audience) => (
-            <InfoCard
+            <ModuleCard
               key={audience.role}
-              title={audience.role}
+              name={audience.role}
               description={audience.detail}
             />
           ))}
