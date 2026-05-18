@@ -65,3 +65,8 @@ npm run dev --prefix apps/web
 ```
 
 Open http://localhost:3000
+
+## Portfolio materials
+
+- [GitHub profile README snippet](docs/portfolio/github-profile-snippet.md) — copy/paste for your GitHub profile
+- [Executive summary outline (1 page)](docs/portfolio/executive-summary.md) — stakeholder briefing or PDF export

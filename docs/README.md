@@ -12,6 +12,11 @@ Product, architecture, governance, and delivery documentation for CONNECT Framew
 6. [Delivery phases](./phases/README.md)
 7. [Diagrams](../diagrams/README.md)
 
+## Portfolio materials
+
+- [GitHub profile README snippet](./portfolio/github-profile-snippet.md)
+- [Executive summary outline (1 page)](./portfolio/executive-summary.md)
+
 ## Phase documents
 
 | Phase | Document |

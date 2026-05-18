@@ -23,6 +23,8 @@ This project is maintained as **portfolio evidence** including:
 
 See **[EVIDENCE.md](./EVIDENCE.md)** for a reviewer guide.
 
+**Portfolio materials:** [GitHub profile snippet](docs/portfolio/github-profile-snippet.md) · [Executive summary (1 page)](docs/portfolio/executive-summary.md)
+
 ## Problem Statement
 
 - Tool sprawl across teams and business units
