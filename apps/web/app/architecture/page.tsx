@@ -1,77 +1,15 @@
 import { InfoCard } from "@/components/InfoCard";
 import { Hero } from "@/components/Hero";
 import { Section } from "@/components/Section";
-
-const highLevelFlow = [
-  "Tool / API / Platform Registration",
-  "Metadata Extraction and Auto-Tagging",
-  "Governance Validation",
-  "AI Analysis",
-  "Consolidation Recommendation",
-  "Role-Specific Decision Support",
-  "Training and Onboarding",
-  "Continuous Monitoring and CMDB Feedback"
-] as const;
-
-const modules = [
-  {
-    title: "Collaboration Hub",
-    description:
-      "Provides a shared space for governance discussions, design decisions, and traceability."
-  },
-  {
-    title: "Governance Engine",
-    description:
-      "Evaluates policy rules and standards across tools, platforms, and engineering workflows."
-  },
-  {
-    title: "Tool Registry",
-    description:
-      "Maintains a centralized inventory of tools, platforms, APIs, owners, and lifecycle states."
-  },
-  {
-    title: "Standardization Engine",
-    description:
-      "Maps enterprise standards to implementation artifacts and highlights alignment gaps."
-  },
-  {
-    title: "Consolidation Recommender",
-    description:
-      "Identifies overlap and presents rationalization opportunities with practical trade-offs."
-  },
-  {
-    title: "AI Assistant",
-    description:
-      "Delivers explainable summaries and role-specific guidance for leaders and delivery teams."
-  },
-  {
-    title: "Training and Onboarding Platform",
-    description:
-      "Converts governance outcomes into role-based enablement and onboarding pathways."
-  },
-  {
-    title: "Monitoring and CMDB Integration",
-    description:
-      "Feeds operational telemetry and enterprise asset context back into governance workflows."
-  },
-  {
-    title: "Platform Services API Catalog",
-    description:
-      "Promotes discoverability and reuse of approved platform services and enterprise APIs."
-  }
-] as const;
-
-const aiCapabilities = [
-  "Metadata extraction",
-  "Tool classification",
-  "Duplicate detection",
-  "Governance rule explanation",
-  "Standards validation",
-  "Risk scoring",
-  "Recommendation generation",
-  "Training recommendation",
-  "Executive and engineer summaries"
-] as const;
+import { GovernanceLoopDiagram } from "@/components/diagrams/GovernanceLoopDiagram";
+import { LayeredArchitectureDiagram } from "@/components/diagrams/LayeredArchitectureDiagram";
+import { OutcomeFlowDiagram } from "@/components/diagrams/OutcomeFlowDiagram";
+import { ProcessingFlowDiagram } from "@/components/diagrams/ProcessingFlowDiagram";
+import { TargetStackDiagram } from "@/components/diagrams/TargetStackDiagram";
+import {
+  aiCapabilities,
+  architectureModules
+} from "@/src/architecture-content";
 
 export default function ArchitecturePage() {
   return (
@@ -83,21 +21,24 @@ export default function ArchitecturePage() {
       />
 
       <Section
-        title="High-Level Flow"
+        title="Architecture Overview"
+        subtitle="A modular architecture that aligns governance policy with platform inventory, AI-assisted analysis, and continuous operational feedback."
+      >
+        <LayeredArchitectureDiagram />
+      </Section>
+
+      <Section
+        title="Closed-Loop Governance Model"
+        subtitle="CONNECT operates as a repeatable cycle rather than a one-time compliance exercise."
+      >
+        <GovernanceLoopDiagram />
+      </Section>
+
+      <Section
+        title="High-Level Processing Flow"
         subtitle="Core processing lifecycle from registration to continuous governance improvement."
       >
-        <div className="verticalFlow" aria-label="CONNECT high-level architecture flow">
-          {highLevelFlow.map((step, index) => (
-            <div key={step} className="verticalFlowRow">
-              <div className="verticalFlowStep">{step}</div>
-              {index < highLevelFlow.length - 1 ? (
-                <div className="verticalFlowArrow" aria-hidden="true">
-                  ↓
-                </div>
-              ) : null}
-            </div>
-          ))}
-        </div>
+        <ProcessingFlowDiagram />
       </Section>
 
       <Section
@@ -105,7 +46,7 @@ export default function ArchitecturePage() {
         subtitle="Each module contributes to a practical governance operating model."
       >
         <div className="grid">
-          {modules.map((module) => (
+          {architectureModules.map((module) => (
             <InfoCard
               key={module.title}
               title={module.title}
@@ -132,40 +73,14 @@ export default function ArchitecturePage() {
         title="Future Technical Architecture"
         subtitle="Practical target stack for productization and enterprise deployment."
       >
-        <div className="grid gridAudience">
-          <InfoCard title="Frontend" description="React / Next.js" />
-          <InfoCard title="Backend" description=".NET Web API" />
-          <InfoCard title="Database" description="PostgreSQL or Cosmos DB" />
-          <InfoCard
-            title="Knowledge Graph"
-            description="Neo4j or graph-capable database"
-          />
-          <InfoCard
-            title="AI / RAG"
-            description="Semantic Kernel, vector database, Azure OpenAI or open-source LLM"
-          />
-          <InfoCard
-            title="Hosting"
-            description="Azure Static Web Apps, Azure App Service, Azure Container Apps"
-          />
-        </div>
+        <TargetStackDiagram />
       </Section>
 
       <Section
-        title="Architecture Diagram"
-        subtitle="Simple logical view of how enterprise inputs move through governance intelligence to outcomes."
+        title="Outcome Flow Diagram"
+        subtitle="How enterprise inputs move through governance intelligence to measurable outcomes."
       >
-        <div className="diagram">
-          <div className="diagramNode">Enterprise Inputs</div>
-          <div className="diagramArrow">↓</div>
-          <div className="diagramNode">Registration + Metadata Processing</div>
-          <div className="diagramArrow">↓</div>
-          <div className="diagramNode">Governance + AI Analysis</div>
-          <div className="diagramArrow">↓</div>
-          <div className="diagramNode">Recommendations + Decision Support</div>
-          <div className="diagramArrow">↓</div>
-          <div className="diagramNode">Training + Monitoring Feedback Loop</div>
-        </div>
+        <OutcomeFlowDiagram />
       </Section>
     </>
   );

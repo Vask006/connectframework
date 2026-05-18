@@ -267,12 +267,27 @@ a:hover {
 
 .verticalFlowStep {
   width: 100%;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
   background: var(--panel-soft);
   border: 1px solid var(--border);
   border-radius: 0.78rem;
   padding: 0.75rem 0.9rem;
   font-weight: 620;
+}
+
+.flowStepIndex {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.55rem;
+  height: 1.55rem;
+  border-radius: 999px;
+  background: rgba(47, 119, 218, 0.22);
+  border: 1px solid var(--accent);
+  color: #dbe6fa;
+  font-size: 0.82rem;
 }
 
 .verticalFlowArrow {
@@ -304,6 +319,136 @@ a:hover {
 .diagramArrow {
   color: var(--muted);
   padding: 0.32rem 0;
+}
+
+.layeredDiagram {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.archLayer {
+  background: rgba(19, 29, 49, 0.5);
+  border: 1px solid var(--border);
+  border-radius: 0.82rem;
+  padding: 0.95rem;
+}
+
+.archLayerHeader h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.02rem;
+}
+
+.archLayerHeader p {
+  margin: 0 0 0.7rem;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.archLayerModules {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.archModuleChip {
+  background: var(--panel-soft);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.38rem 0.72rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.loopDiagram {
+  background: rgba(19, 29, 49, 0.5);
+  border: 1px solid var(--border);
+  border-radius: 0.82rem;
+  padding: 1rem;
+}
+
+.loopTrack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.loopStepWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.loopStep {
+  background: var(--panel-soft);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.48rem 0.82rem;
+  font-weight: 620;
+}
+
+.loopArrow {
+  color: var(--muted);
+}
+
+.loopNote {
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.stackDiagram {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.stackTier {
+  display: grid;
+  grid-template-columns: minmax(120px, 170px) 1fr;
+  gap: 0.75rem;
+  align-items: start;
+  background: var(--panel-soft);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+}
+
+.stackTierLabel {
+  font-weight: 650;
+  color: #d9e5ff;
+}
+
+.stackTierItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.stackItem {
+  background: rgba(47, 119, 218, 0.12);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.32rem 0.55rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.outcomeDiagram {
+  background: rgba(19, 29, 49, 0.5);
+  border: 1px solid var(--border);
+  border-radius: 0.82rem;
+  padding: 1rem;
+}
+
+.outcomeStage {
+  margin-bottom: 0.35rem;
+}
+
+.outcomeDetail {
+  margin: 0.35rem 0 0.55rem;
+  color: var(--muted);
+  font-size: 0.93rem;
+  max-width: 72ch;
 }
 
 .useCaseGrid {
@@ -410,5 +555,14 @@ a:hover {
 
   .section {
     padding-top: 1.2rem;
+  }
+
+  .stackTier {
+    grid-template-columns: 1fr;
+  }
+
+  .loopTrack {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
