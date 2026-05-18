@@ -18,6 +18,14 @@ export function DemoSummary() {
         <p className="demoMetricValue">{summary.toolCount}</p>
       </article>
       <article className="demoMetric">
+        <p className="demoMetricLabel">API Catalog Entries</p>
+        <p className="demoMetricValue">{summary.apiCount}</p>
+      </article>
+      <article className="demoMetric">
+        <p className="demoMetricLabel">Platforms</p>
+        <p className="demoMetricValue">{summary.platformCount}</p>
+      </article>
+      <article className="demoMetric">
         <p className="demoMetricLabel">Governance Rules</p>
         <p className="demoMetricValue">{summary.ruleCount}</p>
       </article>
@@ -26,16 +34,20 @@ export function DemoSummary() {
         <p className="demoMetricValue">{summary.standardCount}</p>
       </article>
       <article className="demoMetric">
+        <p className="demoMetricLabel">Approved Exceptions</p>
+        <p className="demoMetricValue">{summary.exceptionCount}</p>
+      </article>
+      <article className="demoMetric">
         <p className="demoMetricLabel">Annual Tool Spend (Sample)</p>
         <p className="demoMetricValue">{formatCurrency(summary.totalAnnualCost)}</p>
       </article>
       <article className="demoMetric">
-        <p className="demoMetricLabel">Rationalization Candidates</p>
-        <p className="demoMetricValue">{summary.rationalizeCount}</p>
+        <p className="demoMetricLabel">Avg. Compliance Score</p>
+        <p className="demoMetricValue">{summary.averageComplianceScore}%</p>
       </article>
       <article className="demoMetric">
-        <p className="demoMetricLabel">High-Severity Rules</p>
-        <p className="demoMetricValue">{summary.highSeverityRules}</p>
+        <p className="demoMetricLabel">Non-Compliant Assets</p>
+        <p className="demoMetricValue">{summary.nonCompliantAssets}</p>
       </article>
     </div>
   );

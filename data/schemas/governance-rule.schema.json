@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://connect-framework.dev/schemas/governance-rule.schema.json",
+  "title": "GovernanceRule",
+  "type": "object",
+  "required": ["id", "name", "description", "severity", "appliesTo"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "severity": { "type": "string", "enum": ["High", "Medium", "Low"] },
+    "appliesTo": { "type": "string" }
+  },
+  "additionalProperties": false
+}

@@ -31,19 +31,19 @@ export const roadmapPhases: RoadmapPhase[] = [
   {
     id: "phase-2",
     phase: "Phase 2 — Governance Data Model",
-    status: "In Progress",
+    status: "Complete",
     summary:
-      "Define canonical schemas and ingestion contracts for tools, APIs, platforms, and standards.",
+      "Canonical schemas, expanded registry datasets, ingestion contracts, and rule-based compliance evaluation in the public demo.",
     objectives: [
       "Standardize registry metadata",
       "Enable repeatable governance evaluations",
       "Prepare data for interactive demos and APIs"
     ],
     deliverables: [
-      "data/schema.md baseline",
-      "Registry ingestion contract drafts",
-      "Expanded sample datasets",
-      "Demo views backed by JSON data"
+      "JSON schemas for tools, APIs, platforms, rules, standards, exceptions",
+      "Expanded sample datasets and ingestion contract examples",
+      "Registry library and governance evaluation engine",
+      "Demo and registry pages with compliance scoring"
     ]
   },
   {

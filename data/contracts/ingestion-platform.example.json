@@ -1,0 +1,15 @@
+{
+  "source": "platform-registry",
+  "submittedBy": "platform-governance@example.com",
+  "record": {
+    "id": "platform-005",
+    "name": "Customer Data Platform",
+    "platformType": "Data Platform",
+    "owner": "Customer Platform Team",
+    "businessDomain": "Customer",
+    "lifecycleStatus": "Strategic",
+    "costCenter": "CC-4102",
+    "linkedToolIds": ["tool-001"],
+    "description": "Unified customer data services and API exposure layer."
+  }
+}

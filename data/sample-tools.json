@@ -10,6 +10,11 @@
     "riskLevel": "Low",
     "usageLevel": "High",
     "lifecycleStatus": "Strategic",
+    "costCenter": "CC-4102",
+    "securityClassification": "Internal",
+    "observabilityEnabled": true,
+    "dataPrivacyReviewed": true,
+    "approved": true,
     "description": "Primary API gateway and policy enforcement platform for internal and external APIs."
   },
   {
@@ -23,6 +28,11 @@
     "riskLevel": "Medium",
     "usageLevel": "Medium",
     "lifecycleStatus": "Tolerate",
+    "costCenter": "CC-4102",
+    "securityClassification": "Internal",
+    "observabilityEnabled": true,
+    "dataPrivacyReviewed": true,
+    "approved": true,
     "description": "Legacy and SaaS integration platform used for orchestration between ERP, CRM, and internal systems."
   },
   {
@@ -36,6 +46,11 @@
     "riskLevel": "Medium",
     "usageLevel": "High",
     "lifecycleStatus": "Strategic",
+    "costCenter": "CC-4201",
+    "securityClassification": "Internal",
+    "observabilityEnabled": false,
+    "dataPrivacyReviewed": true,
+    "approved": true,
     "description": "Shared API testing and collaboration workspace for engineering squads and platform teams."
   },
   {
@@ -49,6 +64,11 @@
     "riskLevel": "Low",
     "usageLevel": "High",
     "lifecycleStatus": "Strategic",
+    "costCenter": "CC-4201",
+    "securityClassification": "Confidential",
+    "observabilityEnabled": true,
+    "dataPrivacyReviewed": true,
+    "approved": true,
     "description": "Enterprise source control, pull request governance, and automation platform."
   },
   {
@@ -62,6 +82,11 @@
     "riskLevel": "Medium",
     "usageLevel": "Medium",
     "lifecycleStatus": "Sunset Candidate",
+    "costCenter": "CC-4201",
+    "securityClassification": "Internal",
+    "observabilityEnabled": true,
+    "dataPrivacyReviewed": false,
+    "approved": true,
     "description": "Existing pipeline platform still used by legacy workloads and transition teams."
   },
   {
@@ -75,6 +100,11 @@
     "riskLevel": "Low",
     "usageLevel": "High",
     "lifecycleStatus": "Strategic",
+    "costCenter": "CC-4300",
+    "securityClassification": "Confidential",
+    "observabilityEnabled": true,
+    "dataPrivacyReviewed": true,
+    "approved": true,
     "description": "Incident, change, and configuration management system integrated with governance workflows."
   },
   {
@@ -88,6 +118,11 @@
     "riskLevel": "Low",
     "usageLevel": "High",
     "lifecycleStatus": "Strategic",
+    "costCenter": "CC-4400",
+    "securityClassification": "Internal",
+    "observabilityEnabled": true,
+    "dataPrivacyReviewed": true,
+    "approved": true,
     "description": "Primary enterprise reporting platform for governance dashboards and executive metrics."
   },
   {
@@ -101,6 +136,11 @@
     "riskLevel": "Medium",
     "usageLevel": "Medium",
     "lifecycleStatus": "Rationalize",
+    "costCenter": "",
+    "securityClassification": "Internal",
+    "observabilityEnabled": false,
+    "dataPrivacyReviewed": false,
+    "approved": true,
     "description": "Departmental analytics platform with overlapping capabilities relative to Power BI."
   }
 ]

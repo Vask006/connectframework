@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://connect-framework.dev/schemas/exception.schema.json",
+  "title": "ExceptionRecord",
+  "type": "object",
+  "required": [
+    "id",
+    "assetId",
+    "assetType",
+    "ruleId",
+    "status",
+    "justification",
+    "owner",
+    "approver",
+    "expiresOn",
+    "riskLevel"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "assetId": { "type": "string" },
+    "assetType": { "type": "string", "enum": ["Tool", "API", "Platform"] },
+    "ruleId": { "type": "string" },
+    "status": { "type": "string", "enum": ["Approved", "Pending", "Rejected", "Expired"] },
+    "justification": { "type": "string" },
+    "owner": { "type": "string" },
+    "approver": { "type": "string" },
+    "expiresOn": { "type": "string", "format": "date" },
+    "riskLevel": { "type": "string", "enum": ["Low", "Medium", "High"] }
+  },
+  "additionalProperties": false
+}

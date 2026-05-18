@@ -1,0 +1,17 @@
+{
+  "source": "api-catalog-sync",
+  "submittedBy": "api-enablement@example.com",
+  "record": {
+    "id": "api-006",
+    "name": "notifications-delivery-api",
+    "version": "v1",
+    "owner": "Messaging Platform Team",
+    "domain": "Communications",
+    "lifecycleStatus": "Active",
+    "namingCompliant": true,
+    "reusable": true,
+    "securityClassification": "Internal",
+    "costCenter": "CC-4201",
+    "description": "Enterprise notification delivery service."
+  }
+}

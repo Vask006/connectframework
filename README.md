@@ -55,7 +55,7 @@ See **[EVIDENCE.md](./EVIDENCE.md)** for a reviewer guide.
 | Phase | Status |
 | --- | --- |
 | Phase 1 — Public Foundation | Complete |
-| Phase 2 — Governance Data Model | In Progress |
+| Phase 2 — Governance Data Model | Complete |
 | Phase 3 — Governance Engine MVP | Planned |
 | Phase 4 — Consolidation Intelligence | Planned |
 | Phase 5 — AI Assistant | Planned |

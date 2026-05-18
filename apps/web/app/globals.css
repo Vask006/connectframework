@@ -616,6 +616,57 @@ a:hover {
   color: var(--muted);
 }
 
+.complianceTable {
+  margin-top: 1rem;
+}
+
+.complianceBadge {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.complianceCompliant {
+  background: rgba(46, 160, 98, 0.18);
+  border: 1px solid rgba(46, 160, 98, 0.45);
+  color: #8fd9ad;
+}
+
+.compliancePartial {
+  background: rgba(218, 165, 47, 0.16);
+  border: 1px solid rgba(218, 165, 47, 0.45);
+  color: #e8c878;
+}
+
+.complianceNonCompliant {
+  background: rgba(210, 82, 82, 0.16);
+  border: 1px solid rgba(210, 82, 82, 0.45);
+  color: #f0a0a0;
+}
+
+.evaluationList {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.evaluationCard h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.findingList {
+  margin: 0.65rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+}
+
+.findingList li {
+  margin: 0.35rem 0;
+}
+
 .docsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));

@@ -8,11 +8,12 @@
 - Sample governance datasets and schema documentation
 - Portfolio evidence guide (`EVIDENCE.md`)
 
-## Phase 2: Governance Data Model — **In Progress**
+## Phase 2: Governance Data Model — **Complete**
 
-- Canonical JSON schemas (`data/schema.md`)
-- Interactive demo consuming sample data
-- Registry ingestion contract drafts
+- JSON schemas for tools, APIs, platforms, rules, standards, and exceptions
+- Expanded sample datasets and ingestion contract examples
+- Registry library and governance evaluation engine (`apps/web/src/lib/registry/`)
+- Demo and registry pages with compliance scoring and exceptions
 
 ## Phase 3: Governance Engine MVP — Planned
 

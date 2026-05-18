@@ -12,7 +12,8 @@ This repository is structured as **evidence** of enterprise product thinking, ar
 | Architecture | `/architecture` | Layered architecture, flows, diagrams, target stack |
 | Modules | `/modules` | Nine core CONNECT modules |
 | Use Cases | `/use-cases` | Enterprise scenarios with outcomes |
-| Demo | `/demo` | Interactive views over sample governance data |
+| Demo | `/demo` | Registry views, compliance scoring, exceptions |
+| Registry | `/registry` | Phase 2 canonical registry and compliance dashboard |
 | Roadmap | `/roadmap` | Six phases with status, objectives, deliverables |
 | Docs | `/docs` | Documentation hub linking to canonical repo docs |
 
@@ -26,8 +27,10 @@ This repository is structured as **evidence** of enterprise product thinking, ar
 
 ### 3. Data and schema (`data/`)
 
-- Sample tools, governance rules, and standards
-- `data/schema.md` defining JSON contracts
+- Sample tools, APIs, platforms, governance rules, standards, and exceptions
+- JSON schemas in `data/schemas/` and `data/schema.md`
+- Ingestion contract examples in `data/contracts/`
+- Governance evaluation in `apps/web/src/lib/registry/`
 
 ### 4. Architecture diagrams (`diagrams/`)
 
@@ -50,7 +53,7 @@ GitHub Actions CI runs on every push:
 | Phase | Status |
 | --- | --- |
 | Phase 1 — Public Foundation | **Complete** |
-| Phase 2 — Governance Data Model | **In Progress** |
+| Phase 2 — Governance Data Model | **Complete** |
 | Phase 3 — Governance Engine MVP | Planned |
 | Phase 4 — Consolidation Intelligence | Planned |
 | Phase 5 — AI Assistant | Planned |

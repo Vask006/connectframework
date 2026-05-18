@@ -1,0 +1,46 @@
+[
+  {
+    "id": "platform-001",
+    "name": "Azure Integration Platform",
+    "platformType": "Integration",
+    "owner": "Platform Services Team",
+    "businessDomain": "Enterprise Integration",
+    "lifecycleStatus": "Strategic",
+    "costCenter": "CC-4102",
+    "linkedToolIds": ["tool-001", "tool-002"],
+    "description": "Strategic integration layer spanning API management and enterprise service bus capabilities."
+  },
+  {
+    "id": "platform-002",
+    "name": "Engineering Delivery Platform",
+    "platformType": "Developer Platform",
+    "owner": "Developer Platform Team",
+    "businessDomain": "Engineering Productivity",
+    "lifecycleStatus": "Strategic",
+    "costCenter": "CC-4201",
+    "linkedToolIds": ["tool-004", "tool-005"],
+    "description": "Unified engineering platform for source control, CI/CD, and developer workflows."
+  },
+  {
+    "id": "platform-003",
+    "name": "Enterprise Analytics Platform",
+    "platformType": "Analytics",
+    "owner": "Data and Insights Team",
+    "businessDomain": "Business Intelligence",
+    "lifecycleStatus": "Strategic",
+    "costCenter": "CC-4400",
+    "linkedToolIds": ["tool-007", "tool-008"],
+    "description": "Enterprise analytics footprint including strategic and rationalization candidate tools."
+  },
+  {
+    "id": "platform-004",
+    "name": "IT Service Management Platform",
+    "platformType": "Operations",
+    "owner": "Enterprise Service Management Team",
+    "businessDomain": "IT Operations",
+    "lifecycleStatus": "Strategic",
+    "costCenter": "CC-4300",
+    "linkedToolIds": ["tool-006"],
+    "description": "Operational backbone for incidents, changes, and CMDB integration."
+  }
+]

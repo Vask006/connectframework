@@ -1,73 +1,45 @@
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
+export type {
+  ApiRecord,
+  ExceptionRecord,
+  GovernanceRule,
+  PlatformRecord,
+  StandardRecord,
+  ToolRecord,
+  ComplianceResult,
+  RuleFinding
+} from "./registry/types";
 
-const dataDir = join(process.cwd(), "..", "..", "data");
+export {
+  getTools,
+  getApis,
+  getPlatforms,
+  getGovernanceRules,
+  getStandards,
+  getExceptions,
+  getRegistrySummary
+} from "./registry/load-data";
 
-function readJson<T>(filename: string): T {
-  const raw = readFileSync(join(dataDir, filename), "utf-8");
-  return JSON.parse(raw) as T;
-}
+export {
+  evaluateToolCompliance,
+  evaluateApiCompliance,
+  getPortfolioComplianceSummary
+} from "./registry/governance-engine";
 
-export type ToolRecord = {
-  id: string;
-  name: string;
-  category: string;
-  businessDomain: string;
-  owner: string;
-  annualCost: number;
-  complianceStatus: string;
-  riskLevel: string;
-  usageLevel: string;
-  lifecycleStatus: string;
-  description: string;
-};
-
-export type GovernanceRule = {
-  id: string;
-  name: string;
-  description: string;
-  severity: string;
-  appliesTo: string;
-};
-
-export type StandardRecord = {
-  id: string;
-  name: string;
-  domain: string;
-  version: string;
-  status: string;
-  description: string;
-};
-
-export function getTools(): ToolRecord[] {
-  return readJson<ToolRecord[]>("sample-tools.json");
-}
-
-export function getGovernanceRules(): GovernanceRule[] {
-  return readJson<GovernanceRule[]>("sample-governance-rules.json");
-}
-
-export function getStandards(): StandardRecord[] {
-  return readJson<StandardRecord[]>("sample-standards.json");
-}
+import { getGovernanceRules, getRegistrySummary } from "./registry/load-data";
+import { getPortfolioComplianceSummary } from "./registry/governance-engine";
 
 export function getDemoSummary() {
-  const tools = getTools();
+  const registry = getRegistrySummary();
   const rules = getGovernanceRules();
-  const standards = getStandards();
-
-  const totalAnnualCost = tools.reduce((sum, tool) => sum + tool.annualCost, 0);
-  const rationalizeCount = tools.filter((tool) =>
-    ["Rationalize", "Sunset Candidate"].includes(tool.lifecycleStatus)
-  ).length;
+  const compliance = getPortfolioComplianceSummary();
   const highSeverityRules = rules.filter((rule) => rule.severity === "High").length;
 
   return {
-    toolCount: tools.length,
-    ruleCount: rules.length,
-    standardCount: standards.length,
-    totalAnnualCost,
-    rationalizeCount,
-    highSeverityRules
+    ...registry,
+    highSeverityRules,
+    averageComplianceScore: compliance.averageScore,
+    compliantAssets: compliance.compliant,
+    partialAssets: compliance.partial,
+    nonCompliantAssets: compliance.nonCompliant
   };
 }

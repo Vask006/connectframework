@@ -1,0 +1,38 @@
+[
+  {
+    "id": "exc-001",
+    "assetId": "tool-005",
+    "assetType": "Tool",
+    "ruleId": "rule-007",
+    "status": "Approved",
+    "justification": "Legacy workloads pending migration; privacy review scheduled for next quarter.",
+    "owner": "Legacy DevOps Team",
+    "approver": "Risk and Compliance Office",
+    "expiresOn": "2026-09-30",
+    "riskLevel": "Medium"
+  },
+  {
+    "id": "exc-002",
+    "assetId": "api-002",
+    "assetType": "API",
+    "ruleId": "rule-005",
+    "status": "Approved",
+    "justification": "Naming remediation deferred until commerce platform modernization completes.",
+    "owner": "Order Management Team",
+    "approver": "Enterprise Architecture Board",
+    "expiresOn": "2026-12-31",
+    "riskLevel": "Low"
+  },
+  {
+    "id": "exc-003",
+    "assetId": "tool-008",
+    "assetType": "Tool",
+    "ruleId": "rule-003",
+    "status": "Pending",
+    "justification": "Finance analytics cost center reassignment in progress.",
+    "owner": "Finance Analytics Team",
+    "approver": "Finance Operations",
+    "expiresOn": "2026-06-30",
+    "riskLevel": "Medium"
+  }
+]

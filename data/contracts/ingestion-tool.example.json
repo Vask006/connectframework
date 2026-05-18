@@ -1,0 +1,22 @@
+{
+  "source": "manual-import",
+  "submittedBy": "platform-governance@example.com",
+  "record": {
+    "id": "tool-009",
+    "name": "Internal Developer Portal",
+    "category": "Developer Portal",
+    "businessDomain": "Engineering Productivity",
+    "owner": "Developer Platform Team",
+    "annualCost": 95000,
+    "complianceStatus": "Under Review",
+    "riskLevel": "Low",
+    "usageLevel": "High",
+    "lifecycleStatus": "Strategic",
+    "costCenter": "CC-4201",
+    "securityClassification": "Internal",
+    "observabilityEnabled": true,
+    "dataPrivacyReviewed": true,
+    "approved": false,
+    "description": "Internal portal for platform discovery and standards guidance."
+  }
+}

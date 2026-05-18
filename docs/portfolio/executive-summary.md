@@ -11,7 +11,7 @@
 
 **Author / Owner:** [Your Name]  
 **Repository:** https://github.com/Vask006/connectframework  
-**Status:** Phase 1 complete · Phase 2 in progress  
+**Status:** Phase 1–2 complete · Phase 3 planned  
 **Date:** [Month Year]
 
 ---

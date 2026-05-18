@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://connect-framework.dev/schemas/tool.schema.json",
+  "title": "ToolRecord",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "category",
+    "businessDomain",
+    "owner",
+    "annualCost",
+    "complianceStatus",
+    "riskLevel",
+    "usageLevel",
+    "lifecycleStatus",
+    "costCenter",
+    "securityClassification",
+    "observabilityEnabled",
+    "dataPrivacyReviewed",
+    "description"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "category": { "type": "string" },
+    "businessDomain": { "type": "string" },
+    "owner": { "type": "string", "minLength": 1 },
+    "annualCost": { "type": "number", "minimum": 0 },
+    "complianceStatus": {
+      "type": "string",
+      "enum": ["Compliant", "Partially Compliant", "Under Review", "Non-Compliant"]
+    },
+    "riskLevel": { "type": "string", "enum": ["Low", "Medium", "High"] },
+    "usageLevel": { "type": "string", "enum": ["Low", "Medium", "High"] },
+    "lifecycleStatus": {
+      "type": "string",
+      "enum": ["Strategic", "Tolerate", "Rationalize", "Sunset Candidate"]
+    },
+    "costCenter": { "type": "string", "minLength": 1 },
+    "securityClassification": {
+      "type": "string",
+      "enum": ["Public", "Internal", "Confidential", "Restricted"]
+    },
+    "observabilityEnabled": { "type": "boolean" },
+    "dataPrivacyReviewed": { "type": "boolean" },
+    "approved": { "type": "boolean" },
+    "description": { "type": "string" }
+  },
+  "additionalProperties": false
+}

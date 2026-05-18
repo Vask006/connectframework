@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://connect-framework.dev/schemas/platform.schema.json",
+  "title": "PlatformRecord",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "platformType",
+    "owner",
+    "businessDomain",
+    "lifecycleStatus",
+    "costCenter",
+    "linkedToolIds",
+    "description"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "platformType": { "type": "string" },
+    "owner": { "type": "string", "minLength": 1 },
+    "businessDomain": { "type": "string" },
+    "lifecycleStatus": {
+      "type": "string",
+      "enum": ["Strategic", "Tolerate", "Rationalize", "Sunset Candidate"]
+    },
+    "costCenter": { "type": "string", "minLength": 1 },
+    "linkedToolIds": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "description": { "type": "string" }
+  },
+  "additionalProperties": false
+}

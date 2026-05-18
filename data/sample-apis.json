@@ -1,0 +1,67 @@
+[
+  {
+    "id": "api-001",
+    "name": "customer-profile-api",
+    "version": "v2",
+    "owner": "Customer Platform Team",
+    "domain": "Customer",
+    "lifecycleStatus": "Active",
+    "namingCompliant": true,
+    "reusable": true,
+    "securityClassification": "Confidential",
+    "costCenter": "CC-4102",
+    "description": "Canonical customer profile service for digital channels."
+  },
+  {
+    "id": "api-002",
+    "name": "CustomerOrderAPI",
+    "version": "v1",
+    "owner": "Order Management Team",
+    "domain": "Commerce",
+    "lifecycleStatus": "Active",
+    "namingCompliant": false,
+    "reusable": false,
+    "securityClassification": "Internal",
+    "costCenter": "CC-4500",
+    "description": "Legacy order API with non-standard naming and limited reuse."
+  },
+  {
+    "id": "api-003",
+    "name": "payments-settlement-api",
+    "version": "v3",
+    "owner": "Payments Platform Team",
+    "domain": "Finance",
+    "lifecycleStatus": "Active",
+    "namingCompliant": true,
+    "reusable": true,
+    "securityClassification": "Restricted",
+    "costCenter": "CC-4600",
+    "description": "Settlement processing API for treasury and finance integrations."
+  },
+  {
+    "id": "api-004",
+    "name": "inventory-sync-api",
+    "version": "v1",
+    "owner": "",
+    "domain": "Supply Chain",
+    "lifecycleStatus": "Deprecated",
+    "namingCompliant": true,
+    "reusable": true,
+    "securityClassification": "Internal",
+    "costCenter": "CC-4700",
+    "description": "Deprecated inventory synchronization endpoint pending retirement."
+  },
+  {
+    "id": "api-005",
+    "name": "governance-metrics-api",
+    "version": "v1",
+    "owner": "Platform Services Team",
+    "domain": "Governance",
+    "lifecycleStatus": "Draft",
+    "namingCompliant": true,
+    "reusable": true,
+    "securityClassification": "Internal",
+    "costCenter": "CC-4102",
+    "description": "Prototype API exposing governance compliance metrics for CONNECT dashboards."
+  }
+]

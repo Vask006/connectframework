@@ -1,4 +1,10 @@
-import { getTools } from "@/src/lib/demo-data";
+import { evaluateToolCompliance, getTools } from "@/src/lib/demo-data";
+
+function statusClass(status: string) {
+  if (status === "Compliant") return "complianceBadge complianceCompliant";
+  if (status === "Partially Compliant") return "complianceBadge compliancePartial";
+  return "complianceBadge complianceNonCompliant";
+}
 
 function formatCurrency(value: number) {
   return new Intl.NumberFormat("en-US", {
@@ -21,11 +27,15 @@ export function ToolRegistryTable() {
             <th>Owner</th>
             <th>Lifecycle</th>
             <th>Risk</th>
+            <th>Approved</th>
             <th>Annual Cost</th>
+            <th>Compliance</th>
           </tr>
         </thead>
         <tbody>
-          {tools.map((tool) => (
+          {tools.map((tool) => {
+            const result = evaluateToolCompliance(tool);
+            return (
             <tr key={tool.id}>
               <td>
                 <strong>{tool.name}</strong>
@@ -35,9 +45,16 @@ export function ToolRegistryTable() {
               <td>{tool.owner}</td>
               <td>{tool.lifecycleStatus}</td>
               <td>{tool.riskLevel}</td>
+              <td>{tool.approved ? "Yes" : "No"}</td>
               <td>{formatCurrency(tool.annualCost)}</td>
+              <td>
+                <span className={statusClass(result.status)}>
+                  {result.score}% · {result.status}
+                </span>
+              </td>
             </tr>
-          ))}
+          );
+          })}
         </tbody>
       </table>
     </div>

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://connect-framework.dev/schemas/standard.schema.json",
+  "title": "StandardRecord",
+  "type": "object",
+  "required": ["id", "name", "domain", "version", "status", "description"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "domain": { "type": "string" },
+    "version": { "type": "string" },
+    "status": { "type": "string", "enum": ["Active", "Draft", "Retired"] },
+    "description": { "type": "string" }
+  },
+  "additionalProperties": false
+}
