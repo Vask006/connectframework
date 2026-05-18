@@ -1,37 +1,36 @@
 # CONNECT Framework Roadmap
 
-## Phase 1: Public Foundation (Week 1)
+## Phase 1: Public Foundation — **Complete**
 
-- Repository structure and contribution baseline
-- Public-facing website with architecture and use case pages
-- Azure deployment readiness artifacts
+- Monorepo structure and CI verification
+- Public website with core pages, demo, modules, and documentation hub
+- Architecture diagrams (Mermaid + web components)
+- Sample governance datasets and schema documentation
+- Portfolio evidence guide (`EVIDENCE.md`)
 
-## Phase 2: Governance Data Model
+## Phase 2: Governance Data Model — **In Progress**
 
-- Define canonical schema for tools, platforms, and APIs
-- Add initial registry ingestion contracts
-- Introduce standards mapping model
+- Canonical JSON schemas (`data/schema.md`)
+- Interactive demo consuming sample data
+- Registry ingestion contract drafts
 
-## Phase 3: Governance Engine MVP
+## Phase 3: Governance Engine MVP — Planned
 
-- Implement policy evaluation primitives
-- Add standardization score prototypes
-- Build first governance insights views
+- .NET Web API scaffold (`packages/api`)
+- Rule evaluation primitives
+- Governance dashboard MVP
 
-## Phase 4: Consolidation Intelligence
+## Phase 4: Consolidation Intelligence — Planned
 
-- Implement overlap detection heuristics
-- Generate explainable consolidation recommendations
-- Add action prioritization model
+- Overlap detection heuristics
+- Explainable consolidation recommendations
 
-## Phase 5: AI Assistant and Enablement
+## Phase 5: AI Assistant and Enablement — Planned
 
-- Add role-specific guidance workflows
-- Connect recommendations to onboarding pathways
-- Introduce feedback loop for recommendation quality
+- Semantic Kernel and RAG integration
+- Role-specific guidance workflows
 
-## Phase 6: Enterprise Integrations
+## Phase 6: Enterprise Integrations — Planned
 
-- Integrate monitoring and CMDB connectors
-- Expand API catalog workflows
-- Add operational adoption and impact metrics
+- CMDB and monitoring connectors
+- CI/CD policy gate integration

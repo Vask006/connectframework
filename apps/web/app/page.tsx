@@ -19,6 +19,7 @@ export default function HomePage() {
         description="CONNECT helps organizations reduce tool sprawl, enforce standards, guide engineers, detect redundant platforms, and align digital transformation through explainable AI-assisted governance."
         actions={[
           { label: "Explore the Framework", href: "#solution", primary: true },
+          { label: "View Interactive Demo", href: "/demo" },
           { label: "View Architecture", href: "/architecture" }
         ]}
       />
@@ -99,7 +100,10 @@ export default function HomePage() {
             for enterprise governance, engineering standardization, and AI-assisted
             platform alignment.
           </p>
-          <Link className="btn btnPrimary" href="/roadmap">
+          <Link className="btn btnPrimary" href="/demo">
+            View Interactive Demo
+          </Link>
+          <Link className="btn" href="/roadmap">
             View Project Roadmap
           </Link>
         </div>

@@ -1,0 +1,13 @@
+{
+  "name": "connect-framework",
+  "version": "0.2.0",
+  "private": true,
+  "description": "CONNECT Framework monorepo — enterprise governance and platform alignment",
+  "scripts": {
+    "dev": "npm run dev --prefix apps/web",
+    "build": "npm run build --prefix apps/web",
+    "lint": "npm run lint --prefix apps/web",
+    "typecheck": "npm run typecheck --prefix apps/web",
+    "verify": "npm run lint && npm run typecheck && npm run build"
+  }
+}

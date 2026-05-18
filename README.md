@@ -2,15 +2,28 @@
 
 **AI-Augmented Enterprise Governance and Platform Alignment**
 
+> Portfolio and product evidence repository — hosted on GitHub with a build-verified public website.
+
 ## Overview
 
 CONNECT Framework is an enterprise-focused framework and product prototype designed to help organizations govern tools, platforms, APIs, and engineering standards with greater clarity and consistency.
 
-It exists to address a common challenge in digital transformation programs: technology adoption moves quickly, but governance, standardization, and decision support often remain fragmented. CONNECT provides a practical structure for aligning engineering execution with enterprise strategy through explainable, AI-assisted governance workflows.
+It provides a practical structure for aligning engineering execution with enterprise strategy through explainable, AI-assisted governance workflows.
+
+## Evidence repository
+
+This project is maintained as **portfolio evidence** including:
+
+- Public website (`apps/web`) with architecture, use cases, interactive demo, modules, roadmap, and documentation hub
+- Canonical documentation (`docs/`)
+- Sample governance datasets (`data/`)
+- Architecture diagrams (`diagrams/`)
+- Six-phase delivery roadmap with status tracking
+- CI build verification (no cloud deployment required)
+
+See **[EVIDENCE.md](./EVIDENCE.md)** for a reviewer guide.
 
 ## Problem Statement
-
-Many organizations face recurring governance and platform alignment issues:
 
 - Tool sprawl across teams and business units
 - Duplicate systems and overlapping platform capabilities
@@ -21,126 +34,95 @@ Many organizations face recurring governance and platform alignment issues:
 
 ## Solution
 
-CONNECT applies a closed-loop governance model:
-
-**Register → Validate → Analyze → Recommend → Train → Monitor**
-
-This model helps enterprises move from static governance documentation to an iterative operating approach with measurable outcomes.
+**Register → Validate → Analyze → Recommend → Train → Monitor → Improve**
 
 ## Core Modules
 
-- **Collaboration Hub**: Shared governance workspace for architecture discussions, decisions, and traceability.
-- **Governance Engine**: Rule evaluation and policy validation across tools, APIs, and platforms.
-- **Tool Registry**: Central inventory of tools, ownership, lifecycle, cost, and usage metadata.
-- **Standardization Engine**: Standards mapping, compliance checks, and exception tracking.
-- **Consolidation Recommender**: Overlap detection and rationalization recommendations.
-- **AI Assistant**: Explainable role-specific guidance for executives, architects, and engineers.
-- **Training Platform**: Targeted onboarding and learning paths based on governance outcomes.
-- **Monitoring and CMDB**: Operational telemetry and configuration context for continuous governance.
-- **API Services Catalog**: Discoverable catalog of reusable internal platform and API services.
+1. Collaboration Hub
+2. Governance Engine
+3. Tool Registry
+4. Standardization Engine
+5. Consolidation Recommender
+6. AI Assistant
+7. Training Platform
+8. Monitoring and CMDB Integration
+9. API Services Catalog
 
-## Target Users
+## Delivery Phases
 
-- Enterprise architects
-- Engineering teams
-- Platform teams
-- Executives
-- Risk and compliance teams
-- Digital transformation teams
+| Phase | Status |
+| --- | --- |
+| Phase 1 — Public Foundation | Complete |
+| Phase 2 — Governance Data Model | In Progress |
+| Phase 3 — Governance Engine MVP | Planned |
+| Phase 4 — Consolidation Intelligence | Planned |
+| Phase 5 — AI Assistant | Planned |
+| Phase 6 — Enterprise Integrations | Planned |
 
-## Current Status
-
-CONNECT is currently in **Phase 1**: public website and framework foundation.
-
-Current focus areas include:
-
-- Public-facing project experience
-- Architecture and use-case documentation
-- Monorepo baseline for future implementation
-- Azure deployment readiness artifacts
-
-## Roadmap
-
-1. Public website
-2. Interactive demo
-3. MVP platform
-4. AI assistant
-5. Enterprise integrations
-
-## Technology Stack
-
-### Current
-
-- Next.js (React)
-- TypeScript
-- CSS (clean responsive styling; Tailwind optional in future)
-- GitHub Actions
-- Azure Static Web Apps readiness
-
-### Future (Target)
-
-- .NET Web API
-- PostgreSQL and/or Cosmos DB
-- Semantic Kernel
-- Vector database
-- Azure OpenAI or open-source LLM
+Details: `docs/phases/README.md` and `/roadmap` on the website.
 
 ## Repository Structure
 
 ```text
 connect-framework/
-|
-|-- apps/
-|   `-- web/                     # Public website and future UI surfaces (Next.js + TypeScript)
-|-- docs/                        # Architecture, product strategy, governance, use cases, deployment docs
-|-- data/                        # Sample tools, governance rules, and standards datasets
-|-- diagrams/                    # Architecture and process diagrams
-|-- infra/
-|   `-- azure/                   # Azure deployment config and IaC templates
-|-- .github/
-|   `-- workflows/               # CI/CD and deployment workflows
-|-- README.md
-|-- LICENSE
-`-- .gitignore
+├── apps/web/          # Next.js public website + interactive demo
+├── docs/              # Product, architecture, governance, phases
+├── data/              # Sample JSON datasets + schema
+├── diagrams/          # Mermaid architecture diagrams
+├── packages/          # Future API and shared libraries (scaffold)
+├── .github/workflows/ # CI (lint, typecheck, build)
+├── EVIDENCE.md        # Portfolio reviewer guide
+└── README.md
 ```
 
-## Local Development
-
-From repository root:
+## Quick Start
 
 ```bash
-cd apps/web
-npm install
+# From repository root
+npm install --prefix apps/web
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open http://localhost:3000
 
-## Deployment
+### Verify build
 
-CONNECT is being prepared for deployment to **Azure Static Web Apps**.
+```bash
+npm run verify
+```
 
-- GitHub workflow: `.github/workflows/azure-static-web-apps.yml`
-- Azure Static Web Apps config: `infra/azure/staticwebapp.config.json`
-- Infrastructure starter template: `infra/azure/main.bicep`
+## Website pages
 
-Deployment will evolve as backend services and enterprise integrations are introduced in later phases.
+| Page | Path |
+| --- | --- |
+| Home | `/` |
+| Architecture | `/architecture` |
+| Modules | `/modules` |
+| Use Cases | `/use-cases` |
+| Interactive Demo | `/demo` |
+| Roadmap | `/roadmap` |
+| Documentation Hub | `/docs` |
 
-## License
+## Technology Stack
 
-License is currently a project placeholder during early framework development.  
-For long-term adoption, **MIT** or **Apache 2.0** are recommended options depending on governance, contribution, and commercial strategy decisions.
+**Current:** Next.js, TypeScript, CSS, GitHub Actions CI
 
-See `LICENSE` for the current repository license file.
+**Future:** .NET Web API, PostgreSQL/Cosmos DB, Semantic Kernel, vector database, knowledge graph
 
-## Documentation Index
+## Documentation
 
-- Architecture: `docs/architecture/architecture-overview.md`
-- Product strategy: `docs/product-strategy/vision.md`
-- Governance rules: `docs/governance-rules/sample-governance-model.md`
-- Use cases: `docs/use-cases/enterprise-use-cases.md`
-- Deployment: `docs/deployment/azure-static-web-apps.md`
+- [Product vision](docs/product-strategy/vision.md)
+- [Architecture overview](docs/architecture/architecture-overview.md)
+- [Enterprise use cases](docs/use-cases/enterprise-use-cases.md)
+- [Governance model](docs/governance-rules/sample-governance-model.md)
+- [Data schema](data/schema.md)
+- [Phases](docs/phases/README.md)
+- [Diagrams](diagrams/README.md)
 
 ## Contributing
 
-See `CONTRIBUTING.md`.
+See [CONTRIBUTING.md](./CONTRIBUTING.md).
+
+## License
+
+MIT License — see [LICENSE](./LICENSE).

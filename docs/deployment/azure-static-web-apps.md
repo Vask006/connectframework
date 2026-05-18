@@ -1,8 +1,12 @@
-# Azure Static Web Apps Deployment
+# Azure Static Web Apps Deployment (Optional)
 
 ## Purpose
 
-This document explains how CONNECT Framework's website is deployed using Azure Static Web Apps and GitHub Actions, with `apps/web` as the application path.
+CONNECT is primarily maintained as a **GitHub evidence repository** with CI build verification. Azure deployment is optional and not required for portfolio review.
+
+This document explains how the website could be deployed using Azure Static Web Apps if needed, with `apps/web` as the application path.
+
+> **Note:** The Azure GitHub Actions deploy workflow has been removed in favor of CI-only builds. Re-add deployment when a live hosted URL is required.
 
 ## Why Azure Static Web Apps
 

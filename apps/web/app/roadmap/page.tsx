@@ -1,25 +1,7 @@
 import { Hero } from "@/components/Hero";
 import { RoadmapPhaseCard } from "@/components/RoadmapPhaseCard";
 import { Section } from "@/components/Section";
-
-const roadmapPhases = [
-  {
-    phase: "Phase 1 - Foundation",
-    description: "Monorepo baseline, public web experience, and deployment readiness."
-  },
-  {
-    phase: "Phase 2 - Registry and Standards",
-    description: "Canonical data model, inventory ingestion, and standards mapping."
-  },
-  {
-    phase: "Phase 3 - Recommendation Intelligence",
-    description: "Explainable consolidation and alignment recommendations."
-  },
-  {
-    phase: "Phase 4 - Integrations and AI",
-    description: "Operational integrations and role-specific AI guidance."
-  }
-] as const;
+import { roadmapPhases } from "@/src/phase-content";
 
 export default function RoadmapPage() {
   return (
@@ -27,15 +9,21 @@ export default function RoadmapPage() {
       <Hero
         eyebrow="Roadmap"
         title="CONNECT Framework Delivery Roadmap"
-        description="The roadmap prioritizes practical progression from public framework visibility to enterprise-grade governance capabilities."
+        description="Six phased stages from public foundation through enterprise integrations. Phase 1 is complete; later phases define the product evolution path."
       />
-      <Section title="Phased Plan" subtitle="Each phase builds measurable governance and platform alignment capabilities.">
-        <div className="grid">
+      <Section
+        title="Phased Delivery Plan"
+        subtitle="Each phase adds measurable governance capability while keeping the framework practical for enterprise adoption."
+      >
+        <div className="useCaseGrid">
           {roadmapPhases.map((item) => (
             <RoadmapPhaseCard
-              key={item.phase}
+              key={item.id}
               phase={item.phase}
-              description={item.description}
+              status={item.status}
+              summary={item.summary}
+              objectives={item.objectives}
+              deliverables={item.deliverables}
             />
           ))}
         </div>

@@ -1,17 +1,28 @@
 # Docs
 
-This folder contains product, architecture, governance, and deployment documentation.
+Product, architecture, governance, and delivery documentation for CONNECT Framework.
 
-- `architecture/`: reference architecture and design decisions.
-- `product-strategy/`: vision, positioning, and phased strategy.
-- `governance-rules/`: policy and rule examples.
-- `use-cases/`: role-based implementation scenarios.
-- `deployment/`: platform deployment guides.
+## Suggested reading order
 
-## Suggested Reading Order
+1. [Product vision](./product-strategy/vision.md)
+2. [Architecture overview](./architecture/architecture-overview.md)
+3. [Enterprise use cases](./use-cases/enterprise-use-cases.md)
+4. [Sample governance model](./governance-rules/sample-governance-model.md)
+5. [Data schema](../data/schema.md)
+6. [Delivery phases](./phases/README.md)
+7. [Diagrams](../diagrams/README.md)
 
-1. `product-strategy/vision.md`
-2. `architecture/architecture-overview.md`
-3. `use-cases/enterprise-use-cases.md`
-4. `governance-rules/sample-governance-model.md`
-5. `deployment/azure-static-web-apps.md`
+## Phase documents
+
+| Phase | Document |
+| --- | --- |
+| 1 | [phase-1-foundation.md](./phases/phase-1-foundation.md) |
+| 2 | [phase-2-data-model.md](./phases/phase-2-data-model.md) |
+| 3 | [phase-3-governance-mvp.md](./phases/phase-3-governance-mvp.md) |
+| 4 | [phase-4-consolidation.md](./phases/phase-4-consolidation.md) |
+| 5 | [phase-5-ai-assistant.md](./phases/phase-5-ai-assistant.md) |
+| 6 | [phase-6-integrations.md](./phases/phase-6-integrations.md) |
+
+## Legacy overview documents
+
+Older overview files are retained for reference: `architecture/overview.md`, `architecture.md`, `use-cases.md`. Canonical sources are listed above.
